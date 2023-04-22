@@ -1,0 +1,62 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  .font-inter {
+    font-family: Inter, sans-serif;
+  }
+  .font-system-ui {
+    font-family: system-ui, sans-serif;
+  }
+  .font-avenir {
+    font-family: Avenir, sans-serif;
+  }
+  .font-helvetica {
+    font-family: Helvetica, sans-serif;
+  }
+  .font-arial {
+    font-family: Arial, sans-serif;
+  }
+  .font-no-synthesis {
+    -webkit-font-synthesis: none;
+    font-synthesis: none;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .transform-style {
+    transform-style: preserve-3d;
+  }
+  .transform-rotate-y {
+    transform: rotateY(180deg);
+  }
+}
+
+:root {
+  @apply font-inter font-bold text-xl text-center font-no-synthesis;
+}
+
+h1 {
+  @apply text-3xl capitalize;
+}
+
+input {
+  @apply rounded-md text-gray-500 px-1;
+}
+
+button {
+  @apply rounded-md border-transparent px-6 font-medium bg-purple-600 hover:bg-purple-700 focus:border-purple-700 focus:outline-none transition-colors ml-4 text-white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @apply bg-neutral-800 text-white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @apply bg-stone-50 text-gray-900;
+  }
+}

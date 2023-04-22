@@ -1,0 +1,50 @@
+@import './index.css';
+
+#root {
+  @apply text-center w-full flex justify-center items-center mt-10;
+}
+
+section {
+  @apply flex flex-col justify-center items-center;
+}
+
+.bold {
+  @apply font-bold uppercase;
+}
+
+.board {
+  @apply mt-8 grid grid-cols-6 grid-rows-3 gap-4  w-full text-center p-4 md:p-10 md:max-w-4xl;
+}
+
+.card {
+  @apply w-full h-full transform-style rounded-md cursor-pointer shadow-cyan-500/50 aspect-square duration-100 relative;
+}
+
+.card-block-front,
+.card-block-back {
+  @apply absolute w-full h-full rounded-md backface-hidden;
+}
+
+.card-block-inner {
+  @apply relative w-full h-full text-center duration-100 transform-style;
+}
+
+.card-block-flipped {
+  @apply transform-rotate-y;
+}
+
+.card-block-back {
+  @apply transform-rotate-y shadow-cyan-500/50 flex justify-center items-center text-5xl;
+}
+
+.card-block-front {
+  @apply bg-gray-400 p-1 md:p-4;
+}
+
+.front {
+  @apply w-full h-full;
+}
+
+.front img {
+  @apply w-full h-full rounded-md;
+}
