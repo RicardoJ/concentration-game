@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useAnimalCards } from './useAnimalCards';
+import { useAnimalCards } from '../use-animal-cards';
 
 export const useMemoryGame = () => {
   const { cards, getAnimalCards } = useAnimalCards();
@@ -21,17 +21,17 @@ export const useMemoryGame = () => {
   const handleFlipCard = (card) => {
     const flippedCard = { ...card, flipped: true };
     let shuffledCardsCopy = [...shuffledCards];
-    shuffledCardsCopy.splice(card.index, 1, flippedCard);
+    shuffledCardsCopy.splice(card?.index, 1, flippedCard);
     setShuffledCards(shuffledCardsCopy);
     if (selectedCards === null) {
       setSelectedCards(card);
-    } else if (selectedCards.image === card.image) {
+    } else if (selectedCards.image === card?.image) {
       setSelectedCards(null);
       setScore({ ...score, successes: score.successes + 1 });
     } else {
       setAnimating(true);
       setTimeout(() => {
-        shuffledCardsCopy.splice(card.index, 1, card);
+        shuffledCardsCopy.splice(card?.index, 1, card);
         shuffledCardsCopy.splice(selectedCards.index, 1, selectedCards);
         setShuffledCards(shuffledCardsCopy);
         setSelectedCards(null);

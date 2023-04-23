@@ -4,8 +4,12 @@
   @apply text-center w-full flex justify-center items-center mt-10;
 }
 
+.container {
+  @apply flex flex-col gap-5;
+}
+
 section {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center gap-2;
 }
 
 .bold {
@@ -13,7 +17,7 @@ section {
 }
 
 .board {
-  @apply mt-8 grid grid-cols-6 grid-rows-3 gap-4  w-full text-center p-4 md:p-10 md:max-w-4xl;
+  @apply grid grid-cols-6 grid-rows-3 gap-4  w-full text-center p-4 md:p-10 md:max-w-4xl;
 }
 
 .card {

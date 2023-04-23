@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { searchAnimals } from '../services/animals';
+import { searchAnimals } from '../../services/animals';
 export function useAnimalCards() {
   const [cards, setCards] = useState([]);
 

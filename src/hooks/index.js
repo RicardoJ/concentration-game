@@ -1,2 +1,2 @@
-export * from './useAnimalCards';
-export * from './useConcentrationGame';
+export * from './use-animal-cards';
+export * from './use-concentration-game';
