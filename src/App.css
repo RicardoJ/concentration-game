@@ -17,7 +17,7 @@ section {
 }
 
 .board {
-  @apply grid grid-cols-6 grid-rows-3 gap-4  w-full text-center p-4 md:p-10 md:max-w-4xl;
+  @apply grid grid-cols-3 md:grid-cols-6 grid-rows-3 gap-4  w-full text-center p-4 md:p-10 md:max-w-4xl;
 }
 
 .card {
